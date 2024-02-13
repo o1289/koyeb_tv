@@ -10,6 +10,6 @@ RUN ls *.tar.gz | xargs -n1 tar -xzvf
 # CMD ./alist start && synctv server
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-EXPOSE 8080 5244
+EXPOSE 8080 5321
 #ENTRYPOINT [ "/entrypoint.sh" ]
 #CMD [ "server" ]
