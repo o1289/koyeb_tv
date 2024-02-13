@@ -8,8 +8,8 @@ RUN wget https://github.com/alist-org/alist/releases/download/v3.30.0/alist-linu
 # && ./synctv-linux-amd64
 RUN ls *.tar.gz | xargs -n1 tar -xzvf
 # CMD ./alist start && synctv server
-
+COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 EXPOSE 8080 5244
-ENTRYPOINT [ "./alist start && /entrypoint.sh" ]
-CMD [ "server" ]
+#ENTRYPOINT [ "/entrypoint.sh" ]
+#CMD [ "server" ]
