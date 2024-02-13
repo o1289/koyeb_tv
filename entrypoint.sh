@@ -1,9 +1,8 @@
 #!/bin/bash
 
-ls
-mkdir alistdir
-mv alist alistdir
-./alistdir/alist start
+chmod +x alist
+mv alist ..
+../alist start
 
 chown -R ${PUID}:${PGID} /root/.synctv
 
